@@ -4,4 +4,4 @@ keys/
 target/
 dbt_packages/
 logs/
-.DS_Store
+.DS_Storevenv/
