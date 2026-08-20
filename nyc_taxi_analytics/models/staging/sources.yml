@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: nyc_taxi_public
+    database: bigquery-public-data
+    schema: new_york_taxi_trips
+    tables:
+      - name: tlc_yellow_trips_2019
+        description: "Corridas de táxi em NYC durante 2019, dados brutos do TLC (Taxi & Limousine Commission)."
+      - name: taxi_zone_geom
+        description: "Tabela de lookup com nome de zona e geometria por location_id."
