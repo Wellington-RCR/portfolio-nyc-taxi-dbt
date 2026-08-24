@@ -26,7 +26,7 @@ renamed as (
         airport_fee,
         total_amount,
 
-        -- Ponto de atenção: identificamos que ~0.24% das corridas têm fare_amount <= 0
+        -- Flag quality: identificamos que ~0.24% das corridas têm fare_amount <= 0
         -- (170k negativas + 35k zeradas), tratadas como estorno/erro de origem, não descartadas
         case
             when fare_amount > 0 then true
