@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_taxi__trips
+    columns:
+      - name: vendor_id
+        tests:
+          - not_null
+      - name: trip_distance
+        tests:
+          - not_null
+      - name: fare_amount
+        tests:
+          - not_null
+  - name: stg_taxi__zones
+    columns:
+      - name: zone_id
+        tests:
+          - not_null
+          - unique
+      - name: zone_name
+        tests:
+          - not_null
+      - name: borough
+        tests:
+          - not_null
