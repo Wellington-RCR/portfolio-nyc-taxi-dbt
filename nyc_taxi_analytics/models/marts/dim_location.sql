@@ -25,6 +25,12 @@ manual_zones as (
     select '264' as zone_id, 'Unknown' as zone_name, 'Unknown' as borough
     union all
     select '265' as zone_id, 'Outside of NYC' as zone_name, 'N/A' as borough
+    union all
+    select '57' as zone_id, 'Unknown' as zone_name, 'Unknown' as borough
+    union all
+    select '105' as zone_id, 'Unknown' as zone_name, 'Unknown' as borough
+    union all
+    select '104' as zone_id, 'Unknown' as zone_name, 'Unknown' as borough
 
 )
 

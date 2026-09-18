@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: fct_trips
+    columns:
+      - name: vendor_id
+        tests:
+          - relationships:
+              to: ref('dim_vendor')
+              field: vendor_id
+
+      - name: payment_type
+        tests:
+          - relationships:
+              to: ref('dim_payment_type')
+              field: payment_type
+
+      - name: pickup_location_id
+        tests:
+          - relationships:
+              to: ref('dim_location')
+              field: zone_id
+
+      - name: dropoff_location_id
+        tests:
+          - relationships:
+              to: ref('dim_location')
+              field: zone_id
+
+      - name: date_day
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_day
+              config:
+                severity: warn
