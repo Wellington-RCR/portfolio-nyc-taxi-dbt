@@ -1,0 +1,15 @@
+nyc_taxi_analytics:
+  outputs:
+    dev:
+      dataset: nyc_taxi_dbt
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /usr/local/airflow/keys/portifolio-taxi-dbt-8a66cda16107.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: portifolio-taxi-dbt
+      threads: 4
+      type: bigquery
+  target: dev
+  

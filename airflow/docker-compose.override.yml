@@ -1,0 +1,7 @@
+version: "3.1"
+services:
+  scheduler:
+    volumes:
+      - ../nyc_taxi_analytics:/usr/local/airflow/dbt
+      - ../keys:/usr/local/airflow/keys
+      - ./include/dbt_profile:/usr/local/airflow/dbt_profile
