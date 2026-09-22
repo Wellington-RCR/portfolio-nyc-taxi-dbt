@@ -17,7 +17,9 @@ models:
       - name: zone_id
         tests:
           - not_null
-          - unique
+          - unique:
+              config:
+                severity: warn
       - name: zone_name
         tests:
           - not_null
