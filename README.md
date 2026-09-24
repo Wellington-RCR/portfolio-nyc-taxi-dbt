@@ -97,9 +97,20 @@ Volumes Docker conectam o projeto dbt, a chave de service account (fora do contr
 ## Como rodar
 
 ```bash
+# Clonar o repositório
+git clone https://github.com/Wellington-RCR/portfolio-nyc-taxi-dbt.git
+cd portfolio-nyc-taxi-dbt
+
 # dbt
 cd nyc_taxi_analytics
-python -m venv venv && venv\Scripts\activate
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# Linux/Mac
+source venv/bin/activate
+
 pip install -r requirements.txt
 dbt deps
 dbt run
